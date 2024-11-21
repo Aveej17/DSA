@@ -6,13 +6,14 @@ public class QuickSort {
 
     public static void main(String[] args) {
 //        int [] arr  = {2, 4, 1, 3, 5, 7, 61, 8, 100, 9};
-        int arr[] = {4, 5, 6, 1, 2, 3, 10, 9};
+        int [] arr = {10, 11, 12, 13, 19, 17, 18, 12};
         quickSort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
 
     private static void quickSort(int[] arr, int start, int end) {
         if(start<end) {
+            System.out.println(Arrays.toString(arr));
             int pivot = partition(arr, start, end);
             quickSort(arr, start, pivot - 1);
             quickSort(arr, pivot + 1, end);
